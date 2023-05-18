@@ -10,7 +10,7 @@ using namespace std;
 
 // Driver program to test sorting functions
 int main(){
-	int sz = 16000;    // Generate an array with 16000 elements
+	int sz = 32000;    // Generate an array with 16000 elements
     int arr[sz];
     srand(time(NULL));
 
@@ -27,7 +27,7 @@ int main(){
     std::chrono::time_point<std::chrono::system_clock> start, end;
 
     start = std::chrono::system_clock::now();
-    selection(vec, vec + n);
+    shell(vec, vec + n);
     end = std::chrono::system_clock::now();
 
     std::chrono::duration<double> elapsed_seconds = end - start;

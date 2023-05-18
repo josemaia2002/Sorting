@@ -11,7 +11,10 @@ void printArray(int *first, int *last);
 void selection(int *first, int *last);
 void bubble(int *first, int *last);
 int get_max(int *first, int *last);
-void countSort(int *first, int *last, int place);
 void radixsort(int *first, int *last);
+void shell(int *first, int *last);
+void insertion(int *first, int *last);
+void merge(int* first, int* last);
+void quicksort(int* first, int* last);
 
 #endif
