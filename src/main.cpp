@@ -49,35 +49,12 @@ int main(){
     int n = sizeof(arr)/sizeof(arr[0]);
     int* vec = arr;
 
-    std::cout << "25 array " << "s\n";
-    desordem_condicionada(vec, vec + n, 0.25);
-    timing(vec, vec + n);
+    double percent;
+    for(percent = 0.25; percent <= 0.75; percent+=0.25){
+        std::cout << percent << " array " << "s\n";
+        desordem_condicionada(vec, vec + n, percent);
+        timing(vec, vec + n);
+    }
 
-    std::cout << "50 array " << "s\n";
-    desordem_condicionada(vec, vec + n, 0.50);
-    timing(vec, vec + n);
-
-    std::cout << "75 array " << "s\n";
-    desordem_condicionada(vec, vec + n, 0.75);
-    timing(vec, vec + n);
-
-/*
-    std::chrono::time_point<std::chrono::system_clock> start, end;
-
-    start = std::chrono::system_clock::now();
-    shell(vec, vec + n);
-    end = std::chrono::system_clock::now();
-
-    std::chrono::duration<double> elapsed_seconds = end - start;
-    std::time_t end_time = std::chrono::system_clock::to_time_t(end);
-
-    // cout << "Sorted array: \n";
-    // printArray(vec, vec + n); 
-
-    std::cout << "finished computation at " << std::ctime(&end_time)
-            << "elapsed time: " << elapsed_seconds.count() << "s\n";
-
-*/
-  
 	return 0;
 }
