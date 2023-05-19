@@ -6,5 +6,4 @@ set(CMAKE_CXX_FLAGS "-g")
 include_directories( include )
 
 add_executable( program
-                src/main.cpp
-                src/sorting.cpp)
+                src/main.cpp)

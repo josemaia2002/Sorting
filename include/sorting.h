@@ -132,7 +132,57 @@ void shell(T *first, T *last) {
   }
 }
 
-int get_max(int *first, int *last);
-void radixsort(int *first, int *last);
+template <typename T> 
+T get_max(T *first, T *last){
+    T maior = 0;
+    int n = distance(first, last); 
+    for(int i = 0; i < n; i++){
+        if(*(first+i) > maior){
+            maior = *(first+i);
+        }
+    }
+    return maior;
+}
+
+template <typename T> 
+void countSort(T *first, T *last, T place) {
+    const int max = 10;
+    T output[max];
+    T count[max];
+
+    int n = distance(first, last);
+
+    // Initialize count array with all zeros.
+    for(int i = 0; i < max; i++)
+        count[i] = 0;
+
+    // This function increments the element of the count array 
+    // whose index is equal to the i-th element of the original array
+    // e.g.: arr[0] == 4 count[4]++
+    for(int i = 0; i < n; i++) 
+        count[(*(first+i) / place) % 10]++;
+
+
+    // Cumulative sum
+    for(int i = 1; i < max; i++) 
+        count[i] += count[i - 1];
+
+    for(int i = n - 1; i >= 0; i--) {
+        output[count[(*(first+i) / place) % 10] - 1] = *(first+i);
+        count[(*(first+i) / place) % 10]--;
+    }
+
+    for(int i = 0; i < n; i++)
+        *(first+i) = output[i];
+}
+
+template <typename T> 
+void radixsort(T *first, T *last) {
+  T max = get_max(first, last);
+
+  // Apply counting sort to sort elements based on place value.
+  for(int place = 1; max / place > 0; place *= 10)
+    countSort(first, last, place);
+}
 
 #endif
