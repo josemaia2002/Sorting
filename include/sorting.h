@@ -70,8 +70,6 @@ void quicksort(T *first, T *last)
   }
 }
 
-
-
 template <typename T> 
 void merge_aux(T* l_first, T* l_last, T* r_first, T* r_last, T* a_first)
 {
@@ -101,10 +99,26 @@ void merge(T *first, T *last)
     }
 }
 
+template <typename T> 
+void insertion(T *first, T *last) {
+  if (first == last)
+    return;
+  
+  for (int *fast = first + 1; fast != last; ++fast) {
+    int val = *fast;
+    int *runner = fast;
+    while (runner != first && val < *(runner - 1)) {
+      *runner = *(runner - 1);
+      --runner;
+    }
+    *runner = val;
+  }
+}
+
+
 int get_max(int *first, int *last);
 void radixsort(int *first, int *last);
 void shell(int *first, int *last);
-void insertion(int *first, int *last);
 
 #endif
 

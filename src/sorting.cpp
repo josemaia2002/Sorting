@@ -69,28 +69,3 @@ void shell(int *first, int *last) {
     }
   }
 }
-
-int *insert_in_sorted(int *first, int *last, const int &val) {
-  int *runner = last;
-  while (runner != first && val < *(runner - 1)) {
-    *runner = *(runner - 1);
-    --runner;
-  }
-  *runner = val;
-  return last + 1;
-}
-
-void insertion(int *first, int *last) {
-  if (first == last)
-    return;
-  
-  for (int *fast = first + 1; fast != last; ++fast) {
-    int val = *fast;
-    int *runner = fast;
-    while (runner != first && val < *(runner - 1)) {
-      *runner = *(runner - 1);
-      --runner;
-    }
-    *runner = val;
-  }
-}
