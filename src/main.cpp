@@ -49,11 +49,16 @@ int main(){
     int n = sizeof(arr)/sizeof(arr[0]);
     int* vec = arr;
 
+    void (*functptr[])(int*, int*) = {insertion, shell};
+
     double percent;
-    for(percent = 0.25; percent <= 0.75; percent+=0.25){
-        std::cout << percent << " array " << "s\n";
-        desordem_condicionada(vec, vec + n, percent);
-        timing(vec, vec + n, &shell);
+
+    for(int i = 0; i < 2; i++){
+        for(percent = 0.25; percent <= 0.75; percent+=0.25){
+            std::cout << percent << " array " << "s\n";
+            desordem_condicionada(vec, vec + n, percent);
+            timing(vec, vec + n, (functptr[i]));
+        }
     }
 
 	return 0;
