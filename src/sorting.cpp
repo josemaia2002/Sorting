@@ -4,32 +4,17 @@
 
 using namespace std;
 
-/*
-void selection(int *first, int *last) { 
-    int min_idx;
-    int n = distance(first, last);       
 
-    for(int i = 0; i < n-1; i++){
-        min_idx = i;
-        for(int j = i + 1; j < n; j++){
-            if(*(first+j) < *(first+min_idx))
-                min_idx = j;
-        }
-        if(min_idx != i)
-            iter_swap(first+min_idx, first+i);
-    }
-}
-*/
-
-void bubble(int *first, int *last){
+/*void bubble(int *first, int *last){
     int n = distance(first, last);
+    cout << n << endl;
     for(int i = 0; i < n - 1; i++){
-        for(int j = 0; j < n; j++){
+        for(int j = 0; j < n - i - 1; j++){
             if(*(first+j) > *(first+(j+1)))
                 iter_swap(first+j, first+(j+1));
         }
     }
-}  
+} */
 
 int get_max(int *first, int *last){
     int maior = 0;
