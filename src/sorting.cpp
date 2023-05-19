@@ -4,6 +4,7 @@
 
 using namespace std;
 
+/*
 void selection(int *first, int *last) { 
     int min_idx;
     int n = distance(first, last);       
@@ -18,6 +19,7 @@ void selection(int *first, int *last) {
             iter_swap(first+min_idx, first+i);
     }
 }
+*/
 
 void bubble(int *first, int *last){
     int n = distance(first, last);
