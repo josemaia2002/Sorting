@@ -22,11 +22,11 @@ void desordem_condicionada(int * first, int * last, double porcentagem){
     }
   }
 
-void timing(int * first, int * last){
+void timing(int * first, int * last, void (*func)(int*, int*)){
     std::chrono::time_point<std::chrono::system_clock> start, end;
 
     start = std::chrono::system_clock::now();
-    insertion(first, last);
+    func(first, last);
     end = std::chrono::system_clock::now();
 
     std::chrono::duration<double> elapsed_seconds = end - start;
@@ -53,7 +53,7 @@ int main(){
     for(percent = 0.25; percent <= 0.75; percent+=0.25){
         std::cout << percent << " array " << "s\n";
         desordem_condicionada(vec, vec + n, percent);
-        timing(vec, vec + n);
+        timing(vec, vec + n, &shell);
     }
 
 	return 0;
