@@ -115,14 +115,24 @@ void insertion(T *first, T *last) {
   }
 }
 
+template <typename T> 
+void shell(T *first, T *last) {
+  int tamanho = last - first;
+  // Comece com um gap grande e, em seguida, reduz o gap até que ele se torne 1
+  for (int gap = tamanho / 2; gap > 0; gap /= 2) {
+    // Realize a ordenação por inserção em cada sublista definida pelo gap
+    for (int i = gap; i < tamanho; i++) {
+      int temp = first[i];
+      int j;
+      for (j = i; j >= gap && temp < first[j - gap]; j -= gap) {
+        first[j] = first[j - gap];
+      }
+      first[j] = temp;
+    }
+  }
+}
 
 int get_max(int *first, int *last);
 void radixsort(int *first, int *last);
-void shell(int *first, int *last);
 
 #endif
-
-
-
-
-
