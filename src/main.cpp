@@ -38,7 +38,7 @@ void timing(int * first, int * last, void (*func)(int*, int*)){
 
 // Driver program to test sorting functions
 int main(){
-	int sz = 100000;    // Generate an array with 100000 elements
+	int sz = 10;    // Generate an array with 100000 elements
     int arr[sz];
     srand(time(NULL));
 
@@ -49,17 +49,23 @@ int main(){
     int n = sizeof(arr)/sizeof(arr[0]);
     int* vec = arr;
 
-    void (*functptr[])(int*, int*) = {insertion, shell};
+    void (*functptr[])(int*, int*) = {selection, bubble, insertion, merge, quicksort, shell};
 
     double percent;
 
-    for(int i = 0; i < 2; i++){
+    for(int i = 0; i < 6; i++){
         for(percent = 0.25; percent <= 0.75; percent+=0.25){
             std::cout << percent << " array " << "s\n";
             desordem_condicionada(vec, vec + n, percent);
             timing(vec, vec + n, (functptr[i]));
         }
+        std::cout << "=================================================================\n";
     }
+
+    printArray<int>(vec, vec + n);
+
+    std::cout << myMax<int>(3, 7) << "\n";
+
 
 	return 0;
 }

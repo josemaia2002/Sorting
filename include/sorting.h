@@ -7,7 +7,16 @@
 
 using namespace std;
 
-void printArray(int *first, int *last);
+template <typename T> 
+void printArray(T *first, T *last){
+    int i;
+    int n = distance(first, last); 
+    for(i = 0; i < n; i++){
+        cout << *(first+i) << " ";
+        cout << endl;
+    }
+}
+
 void selection(int *first, int *last);
 void bubble(int *first, int *last);
 int get_max(int *first, int *last);
@@ -18,3 +27,8 @@ void merge(int* first, int* last);
 void quicksort(int* first, int* last);
 
 #endif
+
+
+
+
+

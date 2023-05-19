@@ -4,15 +4,6 @@
 
 using namespace std;
 
-void printArray(int *first, int *last){
-    int i;
-    int n = distance(first, last); 
-    for(i = 0; i < n; i++){
-        cout << *(first+i) << " ";
-        cout << endl;
-    }
-}
-
 void selection(int *first, int *last) { 
     int min_idx;
     int n = distance(first, last);       
