@@ -36,7 +36,6 @@ void selection(T *first, T *last) {
 template <typename T> 
 void bubble(T *first, T *last){
     int n = distance(first, last);
-    cout << n << endl;
     for(int i = 0; i < n - 1; i++){
         for(int j = 0; j < n - i - 1; j++){
             if(*(first+j) > *(first+(j+1)))
@@ -44,6 +43,32 @@ void bubble(T *first, T *last){
         }
     }
 } 
+
+template <typename T> 
+int* partition(T *first, T *last, T *pivot)
+{
+  auto slow = first;
+  auto fast = first;
+  while (fast < pivot) {
+    if (*fast < *pivot) {
+      std::iter_swap(slow, fast); 
+      slow++;
+    }
+    fast++;
+  }
+  std::iter_swap(pivot, slow);
+  return slow;
+}
+
+template <typename T> 
+void quicksort(T *first, T *last)
+{  
+  if (std::distance(first, last) >= 2) {
+    auto* q = partition(first, last, last - 1);
+    quicksort(first, q);
+    quicksort(q + 1, last);
+  }
+}
 
 int get_max(int *first, int *last);
 void radixsort(int *first, int *last);

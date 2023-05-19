@@ -51,10 +51,10 @@ int main(){
 
     printArray<int>(vec, vec + n);
 
-    void (*functptr[])(int*, int*) = {selection<int>, bubble<int>};
+    void (*functptr[])(int*, int*) = {selection<int>, bubble<int>, quicksort<int>};
 
     double percent;
-    for(int i = 0; i < 2; i++){
+    for(int i = 0; i < 3; i++){
         for(percent = 0.25; percent <= 0.75; percent+=0.25){
             std::cout << percent << " array " << "s\n";
             desordem_condicionada(vec, vec + n, percent);
