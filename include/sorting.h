@@ -70,12 +70,41 @@ void quicksort(T *first, T *last)
   }
 }
 
+
+
+template <typename T> 
+void merge_aux(T* l_first, T* l_last, T* r_first, T* r_last, T* a_first)
+{
+    while (l_first != l_last) {
+        if (r_first == r_last) {
+            std::copy(l_first, l_last, a_first);
+            return;
+        }
+        *a_first++ = (*l_first < *r_first) ? *l_first++ : *r_first++;
+    }
+    std::copy(r_first, r_last, a_first);
+}
+
+template <typename T> 
+void merge(T *first, T *last)
+{
+    auto len = std::distance(first, last);
+    if (len >= 2) {
+        auto* m = first + len / 2;
+        merge(first, m);
+        merge(m, last);
+
+        T* temp = new T[len];
+        merge_aux(first, m, m, last, temp);
+        std::copy(temp, temp + len, first);
+        delete[] temp;
+    }
+}
+
 int get_max(int *first, int *last);
 void radixsort(int *first, int *last);
 void shell(int *first, int *last);
 void insertion(int *first, int *last);
-void merge(int* first, int* last);
-void quicksort(int* first, int* last);
 
 #endif
 

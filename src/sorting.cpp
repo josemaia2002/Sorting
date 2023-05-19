@@ -94,30 +94,3 @@ void insertion(int *first, int *last) {
     *runner = val;
   }
 }
-
-void merge_aux(int* l_first, int* l_last, int* r_first, int* r_last, int* a_first)
-{
-    while (l_first != l_last) {
-        if (r_first == r_last) {
-            std::copy(l_first, l_last, a_first);
-            return;
-        }
-        *a_first++ = (*l_first < *r_first) ? *l_first++ : *r_first++;
-    }
-    std::copy(r_first, r_last, a_first);
-}
-
-void merge(int* first, int* last)
-{
-    auto len = std::distance(first, last);
-    if (len >= 2) {
-        auto* m = first + len / 2;
-        merge(first, m);
-        merge(m, last);
-
-        int* temp = new int[len];
-        merge_aux(first, m, m, last, temp);
-        std::copy(temp, temp + len, first);
-        delete[] temp;
-    }
-}
