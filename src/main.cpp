@@ -23,7 +23,7 @@ void desordem_condicionada(int * first, int * last, double porcentagem){
     }
   }
 
-void timing(int * first, int * last, void (*func)(int*, int*)){    
+void timing(int * first, int * last, void (*func)(int*, int*), ofstream& arquivo){    
     std::chrono::time_point<std::chrono::system_clock> start, end;
 
     start = std::chrono::system_clock::now();
@@ -33,7 +33,7 @@ void timing(int * first, int * last, void (*func)(int*, int*)){
     std::chrono::duration<double> elapsed_seconds = end - start;
     std::time_t end_time = std::chrono::system_clock::to_time_t(end);
 
-    std::fstream arquivo("../data/log_data.txt", ios::app);
+//     arquivo.open("../data/log_data.txt", ios::app);
 
     arquivo << "finished computation at " << std::ctime(&end_time)
             << "elapsed time: " << elapsed_seconds.count() << "s\n";
@@ -43,7 +43,8 @@ void timing(int * first, int * last, void (*func)(int*, int*)){
 
 // Driver program to test sorting functions
 int main(){   
-    std::fstream arquivo("../data/log_data.txt", ios::app);
+    std::ofstream arquivo;
+    
 	int sz = 10;    // Generate an array with 100000 elements
     int arr[sz];
     srand(time(NULL));
@@ -60,13 +61,17 @@ int main(){
     double percent;
     for(int i = 0; i < 7; i++){
         for(percent = 0.25; percent <= 0.75; percent+=0.25){
+            arquivo.open("../data/log_data.txt", ios::app);
             arquivo << percent << " array " << "s\n";
             desordem_condicionada(vec, vec + n, percent);
-            timing(vec, vec + n, (functptr[i]));
+            timing(vec, vec + n, (functptr[i]), arquivo);
+            arquivo.close();
         }
+        arquivo.open("../data/log_data.txt", ios::app);
         arquivo << "=================================================================\n";
+        arquivo.close();
     }
-    arquivo.close();
+    
 
 	return 0;
 }
