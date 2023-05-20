@@ -6,6 +6,7 @@
 #include <ctime>
 #include <functional>
 #include <cmath>
+#include <string>
 
 #include "sorting.h"
 
@@ -45,7 +46,7 @@ void timing(int * first, int * last, void (*func)(int*, int*), ofstream& arquivo
 int main(){   
     std::ofstream arquivo;
     
-	int sz = 10;    // Generate an array with 100000 elements
+	int sz = 100000;    // Generate an array with 100000 elements
     int arr[sz];
     srand(time(NULL));
 
@@ -58,8 +59,13 @@ int main(){
 
     void (*functptr[])(int*, int*) = {selection<int>, bubble<int>, quicksort<int>, merge<int>, insertion<int>, shell<int>, radixsort<int>};
 
+    std::string colour[7] = { "selection", "bubble", "quicksort", "merge", "insertion", "shell", "radixsort"};
+
     double percent;
     for(int i = 0; i < 7; i++){
+        arquivo.open("../data/log_data.txt", ios::app);
+        arquivo << colour[i] << "\n";
+        arquivo.close();
         for(percent = 0.25; percent <= 0.75; percent+=0.25){
             arquivo.open("../data/log_data.txt", ios::app);
             arquivo << percent << " array " << "s\n";
