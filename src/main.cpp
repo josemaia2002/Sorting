@@ -62,7 +62,7 @@ int main(){
     std::string colour[7] = { "selection", "bubble", "quicksort", "merge", "insertion", "shell", "radixsort"};
 
     double percent;
-    for(int i = 6; i < 7; i++){
+    for(int i = 0; i < 7; i++){
         arquivo.open("../data/log_data.txt", ios::app);
         arquivo << colour[i] << "\n";
         arquivo.close();

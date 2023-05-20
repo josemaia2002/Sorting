@@ -1,0 +1,77 @@
+selection
+0.25 array s
+finished computation at Sat May 20 16:16:41 2023
+elapsed time: 33.9961s
+0.5 array s
+finished computation at Sat May 20 16:17:19 2023
+elapsed time: 38.1926s
+0.75 array s
+finished computation at Sat May 20 16:17:59 2023
+elapsed time: 40.1213s
+=================================================================
+bubble
+0.25 array s
+finished computation at Sat May 20 16:20:43 2023
+elapsed time: 163.989s
+0.5 array s
+finished computation at Sat May 20 16:22:58 2023
+elapsed time: 135.191s
+0.75 array s
+finished computation at Sat May 20 16:24:32 2023
+elapsed time: 93.8322s
+=================================================================
+quicksort
+0.25 array s
+finished computation at Sat May 20 16:24:32 2023
+elapsed time: 0.360826s
+0.5 array s
+finished computation at Sat May 20 16:24:33 2023
+elapsed time: 0.367732s
+0.75 array s
+finished computation at Sat May 20 16:24:33 2023
+elapsed time: 0.383749s
+=================================================================
+merge
+0.25 array s
+finished computation at Sat May 20 16:24:33 2023
+elapsed time: 0.0691375s
+0.5 array s
+finished computation at Sat May 20 16:24:33 2023
+elapsed time: 0.0677251s
+0.75 array s
+finished computation at Sat May 20 16:24:33 2023
+elapsed time: 0.0657899s
+=================================================================
+insertion
+0.25 array s
+finished computation at Sat May 20 16:24:50 2023
+elapsed time: 16.8061s
+0.5 array s
+finished computation at Sat May 20 16:25:02 2023
+elapsed time: 12.1659s
+0.75 array s
+finished computation at Sat May 20 16:25:09 2023
+elapsed time: 6.48161s
+=================================================================
+shell
+0.25 array s
+finished computation at Sat May 20 16:25:09 2023
+elapsed time: 0.0571214s
+0.5 array s
+finished computation at Sat May 20 16:25:09 2023
+elapsed time: 0.0548894s
+0.75 array s
+finished computation at Sat May 20 16:25:09 2023
+elapsed time: 0.0505128s
+=================================================================
+radixsort
+0.25 array s
+finished computation at Sat May 20 16:25:09 2023
+elapsed time: 0.0197993s
+0.5 array s
+finished computation at Sat May 20 16:25:09 2023
+elapsed time: 0.0195996s
+0.75 array s
+finished computation at Sat May 20 16:25:09 2023
+elapsed time: 0.0192552s
+=================================================================
