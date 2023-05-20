@@ -1,0 +1,245 @@
+finished computation at Sat May 20 14:09:58 2023
+elapsed time: 6.076e-06s
+finished computation at Sat May 20 14:09:59 2023
+elapsed time: 4.959e-06s
+finished computation at Sat May 20 14:09:59 2023
+elapsed time: 4.33e-06s
+finished computation at Sat May 20 14:09:59 2023
+elapsed time: 6.845e-06s
+finished computation at Sat May 20 14:09:59 2023
+elapsed time: 5.238e-06s
+finished computation at Sat May 20 14:09:59 2023
+elapsed time: 4.26e-06s
+finished computation at Sat May 20 14:09:59 2023
+elapsed time: 6.356e-06s
+finished computation at Sat May 20 14:09:59 2023
+elapsed time: 5.936e-06s
+finished computation at Sat May 20 14:09:59 2023
+elapsed time: 5.937e-06s
+finished computation at Sat May 20 14:09:59 2023
+elapsed time: 1.5784e-05s
+finished computation at Sat May 20 14:09:59 2023
+elapsed time: 1.1873e-05s
+finished computation at Sat May 20 14:09:59 2023
+elapsed time: 1.1314e-05s
+finished computation at Sat May 20 14:09:59 2023
+elapsed time: 4.261e-06s
+finished computation at Sat May 20 14:09:59 2023
+elapsed time: 3.772e-06s
+finished computation at Sat May 20 14:09:59 2023
+elapsed time: 3.493e-06s
+finished computation at Sat May 20 14:09:59 2023
+elapsed time: 5.238e-06s
+finished computation at Sat May 20 14:09:59 2023
+elapsed time: 5.168e-06s
+finished computation at Sat May 20 14:09:59 2023
+elapsed time: 5.308e-06s
+finished computation at Sat May 20 14:09:59 2023
+elapsed time: 9.079e-06s
+finished computation at Sat May 20 14:09:59 2023
+elapsed time: 8.52e-06s
+finished computation at Sat May 20 14:09:59 2023
+elapsed time: 1.0058e-05s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 3.423e-06s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 2.654e-06s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 2.515e-06s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 3.003e-06s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 3.702e-06s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 4.051e-06s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 3.702e-06s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 3.981e-06s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 3.492e-06s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 1.1873e-05s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 7.264e-06s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 5.936e-06s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 2.444e-06s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 2.514e-06s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 2.235e-06s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 3.003e-06s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 3.073e-06s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 2.654e-06s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 2.1581e-05s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 5.168e-06s
+finished computation at Sat May 20 14:12:01 2023
+elapsed time: 5.029e-06s
+0.25 array s
+0.5 array s
+0.75 array s
+0.25 array s
+0.5 array s
+0.75 array s
+0.25 array s
+0.5 array s
+0.75 array s
+0.25 array s
+0.5 array s
+0.75 array s
+0.25 array s
+0.5 array s
+0.75 array s
+0.25 array s
+0.5 array s
+0.75 array s
+0.25 array s
+0.5 array s
+0.75 array s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 4.959e-06s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 3.841e-06s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 3.632e-06s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 4.33e-06s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 4.4e-06s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 3.352e-06s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 5.308e-06s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 5.727e-06s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 4.959e-06s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 1.2501e-05s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 9.358e-06s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 9.289e-06s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 3.422e-06s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 3.003e-06s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 3.212e-06s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 2.723e-06s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 2.933e-06s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 3.003e-06s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 5.168e-06s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 5.238e-06s
+finished computation at Sat May 20 14:12:36 2023
+elapsed time: 5.168e-06s
+0.25 array s
+0.5 array s
+0.75 array s
+=================================================================
+0.25 array s
+0.5 array s
+0.75 array s
+=================================================================
+0.25 array s
+0.5 array s
+0.75 array s
+=================================================================
+0.25 array s
+0.5 array s
+0.75 array s
+=================================================================
+0.25 array s
+0.5 array s
+0.75 array s
+=================================================================
+0.25 array s
+0.5 array s
+0.75 array s
+=================================================================
+0.25 array s
+0.5 array s
+0.75 array s
+=================================================================
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 5.867e-06s
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 2.864e-06s
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 4.68e-06s
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 4.679e-06s
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 3.353e-06s
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 5.728e-06s
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 6.495e-06s
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 6.006e-06s
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 6.216e-06s
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 1.6902e-05s
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 1.1803e-05s
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 1.1105e-05s
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 4.54e-06s
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 3.912e-06s
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 3.422e-06s
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 3.213e-06s
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 2.794e-06s
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 2.793e-06s
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 5.308e-06s
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 5.169e-06s
+finished computation at Sat May 20 14:13:55 2023
+elapsed time: 4.61e-06s
+0.25 array s
+0.5 array s
+0.75 array s
+=================================================================
+0.25 array s
+0.5 array s
+0.75 array s
+=================================================================
+0.25 array s
+0.5 array s
+0.75 array s
+=================================================================
+0.25 array s
+0.5 array s
+0.75 array s
+=================================================================
+0.25 array s
+0.5 array s
+0.75 array s
+=================================================================
+0.25 array s
+0.5 array s
+0.75 array s
+=================================================================
+0.25 array s
+0.5 array s
+0.75 array s
+=================================================================
