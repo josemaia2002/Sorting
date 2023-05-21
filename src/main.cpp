@@ -10,11 +10,24 @@
 
 #include "sorting.h"
 
-void desordem_condicionada(int * first, int * last, double porcentagem){
+enum organization {
+    all_random = 0,
+    quarter = 25,
+    half = 50,
+    three_quarter = 75,
+    non_descending = 100,
+    non_ascending = 125
+} list_sample;
+
+void desordem_condicionada(int * first, int * last, int porcentagem){
     //deixa arranjos com 75%, 50% ou 25% de seus elementos em sua posição definitiva
+
+    if(porcentagem == 125)
+        porcentagem = 100;
+
     int n = last- first;
     int I[n];
-    int p= std::ceil(n*(1-porcentagem));
+    int p= std::ceil(n*((100-porcentagem)/100));
     for(int i=0; i< n; i++){
       I[i]=i;
     }
@@ -34,8 +47,6 @@ void timing(int * first, int * last, void (*func)(int*, int*), ofstream& arquivo
     std::chrono::duration<double> elapsed_seconds = end - start;
     std::time_t end_time = std::chrono::system_clock::to_time_t(end);
 
-//     arquivo.open("../data/log_data.txt", ios::app);
-
     arquivo << "finished computation at " << std::ctime(&end_time)
             << "elapsed time: " << elapsed_seconds.count() << "s\n";
 
@@ -46,30 +57,31 @@ void timing(int * first, int * last, void (*func)(int*, int*), ofstream& arquivo
 int main(){   
     std::ofstream arquivo;
     
-	int sz = 100000;    // Generate an array with 100000 elements
+	int sz = 10;    // Generate an array with 100000 elements
     int arr[sz];
-    srand(time(NULL));
+    // srand(time(NULL));
 
     // Fill the array
-    for(int i = 0; i < sz; i++)
-        arr[i] = rand()%100;  // Generate number between 0 to 900
+    for(int i = 0; i < sz; i++){
+        // arr[i] = rand()%100;  // Generate number between 0 to 900
+        arr[i] = sz - i;
+    }
 
     int n = sizeof(arr)/sizeof(arr[0]);
     int* vec = arr;
 
     void (*functptr[])(int*, int*) = {selection<int>, bubble<int>, quicksort<int>, merge<int>, insertion<int>, shell<int>, radixsort<int>};
 
-    std::string colour[7] = { "selection", "bubble", "quicksort", "merge", "insertion", "shell", "radixsort"};
+    std::string func_names[7] = { "selection", "bubble", "quicksort", "merge", "insertion", "shell", "radixsort"};
 
-    double percent;
     for(int i = 0; i < 7; i++){
         arquivo.open("../data/log_data.txt", ios::app);
-        arquivo << colour[i] << "\n";
+        arquivo << func_names[i] << "\n";
         arquivo.close();
-        for(percent = 0.25; percent <= 0.75; percent+=0.25){
+        for(int sample = non_ascending; sample >= all_random; sample -= quarter){
             arquivo.open("../data/log_data.txt", ios::app);
-            arquivo << percent << " array " << "s\n";
-            desordem_condicionada(vec, vec + n, percent);
+            arquivo << sample << " array " << "s\n";
+            desordem_condicionada(vec, vec + n, sample);
             timing(vec, vec + n, (functptr[i]), arquivo);
             arquivo.close();
         }
@@ -77,9 +89,6 @@ int main(){
         arquivo << "=================================================================\n";
         arquivo.close();
     }
-
-
-    
 
 	return 0;
 }
