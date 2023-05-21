@@ -59,11 +59,9 @@ int main(){
     
 	int sz = 100000;    // Generate an array with 100000 elements
     int arr[sz];
-    // srand(time(NULL));
 
     // Fill the array
     for(int i = 0; i < sz; i++){
-        // arr[i] = rand()%100;  // Generate number between 0 to 900
         arr[i] = sz - i;
     }
 
@@ -78,7 +76,7 @@ int main(){
         arquivo << func_names[i] << "\n";
         arquivo.close();
 
-        for(int j = 10; j < 100; j+=10){
+        for(int j = 100; j < 100000; j+=4000){
             for(int sample = non_ascending; sample >= all_random; sample -= quarter){
                 arquivo.open("../data/log_data.txt", ios::app);
                 arquivo << sample << " array " << "s\n";
