@@ -57,7 +57,7 @@ void timing(int * first, int * last, void (*func)(int*, int*), ofstream& arquivo
 int main(){   
     std::ofstream arquivo;
     
-	int sz = 10;    // Generate an array with 100000 elements
+	int sz = 100000;    // Generate an array with 100000 elements
     int arr[sz];
     // srand(time(NULL));
 
@@ -71,22 +71,24 @@ int main(){
     int* vec = arr;
 
     void (*functptr[])(int*, int*) = {selection<int>, bubble<int>, quicksort<int>, merge<int>, insertion<int>, shell<int>, radixsort<int>};
-
     std::string func_names[7] = { "selection", "bubble", "quicksort", "merge", "insertion", "shell", "radixsort"};
 
     for(int i = 0; i < 7; i++){
         arquivo.open("../data/log_data.txt", ios::app);
         arquivo << func_names[i] << "\n";
         arquivo.close();
-        for(int sample = non_ascending; sample >= all_random; sample -= quarter){
-            arquivo.open("../data/log_data.txt", ios::app);
-            arquivo << sample << " array " << "s\n";
-            desordem_condicionada(vec, vec + n, sample);
-            timing(vec, vec + n, (functptr[i]), arquivo);
-            arquivo.close();
+
+        for(int j = 10; j < 100; j+=10){
+            for(int sample = non_ascending; sample >= all_random; sample -= quarter){
+                arquivo.open("../data/log_data.txt", ios::app);
+                arquivo << sample << " array " << "s\n";
+                desordem_condicionada(vec, vec + j, sample);
+                timing(vec, vec + j, (functptr[i]), arquivo);
+                arquivo.close();
+            }
         }
         arquivo.open("../data/log_data.txt", ios::app);
-        arquivo << "=================================================================\n";
+        arquivo << "\n=================================\n\n\n";
         arquivo.close();
     }
 
