@@ -37,6 +37,7 @@ void desordem_condicionada(int * first, int * last, int porcentagem){
     }
   }
 
+/*
 void timing(int * first, int * last, void (*func)(int*, int*), ofstream& arquivo){    
     std::chrono::time_point<std::chrono::system_clock> start, end;
 
@@ -51,11 +52,39 @@ void timing(int * first, int * last, void (*func)(int*, int*), ofstream& arquivo
             << "elapsed time: " << elapsed_seconds.count() << "s\n";
 
     arquivo.close();
+}*/
+
+
+void timing(int * first, int * last, void (*func)(int*, int*), ofstream& arquivo){    
+    std::chrono::time_point<std::chrono::system_clock> start, end;
+
+    start = std::chrono::system_clock::now();
+    func(first, last);
+    end = std::chrono::system_clock::now();
+
+    std::chrono::duration<double> elapsed_seconds = end - start;
+    std::time_t end_time = std::chrono::system_clock::to_time_t(end);
+
+    arquivo << elapsed_seconds.count() << "\n";
+
+    arquivo.close();
 }
+
 
 // Driver program to test sorting functions
 int main(){   
     std::ofstream arquivo;
+/*
+    std::string selection_path = "../data/selection_data.txt";
+    std::string bubble_path = "../data/bubble_data.txt";
+    std::string quicksort_path = "../data/quicksort_data.txt";
+    std::string merge_path = "../data/merge_data.txt";
+    std::string insertion_path = "../data/insertion_data.txt";
+    std::string shell_path = "../data/shell_data.txt";
+    std::string radix_path = "../data/radix_data.txt";
+*/
+
+    std::string paths[7] = {"../data/selection_data.txt", "../data/bubble_data.txt", "../data/quicksort_data.txt", "../data/merge_data.txt", "../data/insertion_data.txt", "../data/shell_data.txt", "../data/radix_data.txt"};
     
 	int sz = 100000;    // Generate an array with 100000 elements
     int arr[sz];
@@ -72,22 +101,18 @@ int main(){
     std::string func_names[7] = { "selection", "bubble", "quicksort", "merge", "insertion", "shell", "radixsort"};
 
     for(int i = 0; i < 7; i++){
-        arquivo.open("../data/log_data.txt", ios::app);
+        arquivo.open(paths[i], ios::app);
         arquivo << func_names[i] << "\n";
         arquivo.close();
-
-        for(int j = 100; j < 100000; j+=4000){
-            for(int sample = non_ascending; sample >= all_random; sample -= quarter){
-                arquivo.open("../data/log_data.txt", ios::app);
-                arquivo << sample << " array " << "s\n";
+        for(int sample = non_ascending; sample >= all_random; sample -= quarter){
+            for(int j = 10; j < 100; j+=10){
+                arquivo.open(paths[i], ios::app);
                 desordem_condicionada(vec, vec + j, sample);
+                arquivo << j << " ";
                 timing(vec, vec + j, (functptr[i]), arquivo);
                 arquivo.close();
             }
         }
-        arquivo.open("../data/log_data.txt", ios::app);
-        arquivo << "\n=================================\n\n\n";
-        arquivo.close();
     }
 
 	return 0;
