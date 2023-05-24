@@ -1,0 +1,188 @@
+\doxysection{sorting.\+h}
+\hypertarget{sorting_8h_source}{}\label{sorting_8h_source}\index{include/sorting.h@{include/sorting.h}}
+\mbox{\hyperlink{sorting_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SORTING\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SORTING\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iterator>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ }
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sorting_8h_a1b5c317dd4b13c96686456e14cabf80b}{printArray}}(T\ *first,\ T\ *last)\{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ distance(first,\ last);\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{for}(i\ =\ 0;\ i\ <\ n;\ i++)\{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ cout\ <<\ *(first+i)\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ }
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sorting_8h_a07edfdd492ac11defd36fcc3781a0617}{selection}}(T\ *first,\ T\ *last)\ \{\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ min\_idx;}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ distance(first,\ last);\ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n-\/1;\ i++)\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ min\_idx\ =\ i;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ i\ +\ 1;\ j\ <\ n;\ j++)\{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(*(first+j)\ <\ *(first+min\_idx))}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ min\_idx\ =\ j;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(min\_idx\ !=\ i)}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ iter\_swap(first+min\_idx,\ first+i);}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ }
+\DoxyCodeLine{00071\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sorting_8h_a10408b6f5495eb0821c08b04e374d924}{bubble}}(T\ *first,\ T\ *last)\{}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ distance(first,\ last);}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n\ -\/\ 1;\ i++)\{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ n\ -\/\ i\ -\/\ 1;\ j++)\{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(*(first+j)\ >\ *(first+(j+1)))}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ iter\_swap(first+j,\ first+(j+1));}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \}\ }
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00097\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ }
+\DoxyCodeLine{00098\ \textcolor{keywordtype}{int}*\ \mbox{\hyperlink{sorting_8h_abc0b95001b6673171c3c81dcc40d115b}{partition}}(T\ *first,\ T\ *last,\ T\ *pivot)}
+\DoxyCodeLine{00099\ \{}
+\DoxyCodeLine{00100\ \ \ \textcolor{keyword}{auto}\ slow\ =\ first;}
+\DoxyCodeLine{00101\ \ \ \textcolor{keyword}{auto}\ fast\ =\ first;}
+\DoxyCodeLine{00102\ \ \ \textcolor{keywordflow}{while}\ (fast\ <\ pivot)\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordflow}{if}\ (*fast\ <\ *pivot)\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ std::iter\_swap(slow,\ fast);\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ slow++;}
+\DoxyCodeLine{00106\ \ \ \ \ \}}
+\DoxyCodeLine{00107\ \ \ \ \ fast++;}
+\DoxyCodeLine{00108\ \ \ \}}
+\DoxyCodeLine{00109\ \ \ std::iter\_swap(pivot,\ slow);}
+\DoxyCodeLine{00110\ \ \ \textcolor{keywordflow}{return}\ slow;}
+\DoxyCodeLine{00111\ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00124\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ }
+\DoxyCodeLine{00125\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sorting_8h_a2726342a6ccc8fac7e6c3a1d5c8bf1a7}{quicksort}}(T\ *first,\ T\ *last)}
+\DoxyCodeLine{00126\ \{\ \ }
+\DoxyCodeLine{00127\ \ \ \textcolor{keywordflow}{if}\ (std::distance(first,\ last)\ >=\ 2)\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keyword}{auto}*\ q\ =\ \mbox{\hyperlink{sorting_8h_abc0b95001b6673171c3c81dcc40d115b}{partition}}(first,\ last,\ last\ -\/\ 1);}
+\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{sorting_8h_a2726342a6ccc8fac7e6c3a1d5c8bf1a7}{quicksort}}(first,\ q);}
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{sorting_8h_a2726342a6ccc8fac7e6c3a1d5c8bf1a7}{quicksort}}(q\ +\ 1,\ last);}
+\DoxyCodeLine{00131\ \ \ \}}
+\DoxyCodeLine{00132\ \}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00149\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ }
+\DoxyCodeLine{00150\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sorting_8h_acee81dc7bf61b18c3382b8eeacc6bfbc}{merge\_aux}}(T*\ l\_first,\ T*\ l\_last,\ T*\ r\_first,\ T*\ r\_last,\ T*\ a\_first)}
+\DoxyCodeLine{00151\ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordflow}{while}\ (l\_first\ !=\ l\_last)\ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (r\_first\ ==\ r\_last)\ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ std::copy(l\_first,\ l\_last,\ a\_first);}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ *a\_first++\ =\ (*l\_first\ <\ *r\_first)\ ?\ *l\_first++\ :\ *r\_first++;}
+\DoxyCodeLine{00158\ \ \ \ \ \}}
+\DoxyCodeLine{00159\ \ \ \ \ std::copy(r\_first,\ r\_last,\ a\_first);}
+\DoxyCodeLine{00160\ \}}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00173\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ }
+\DoxyCodeLine{00174\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sorting_8h_a515b85edbb4832b89ec49e8a491acc6a}{merge}}(T\ *first,\ T\ *last)}
+\DoxyCodeLine{00175\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keyword}{auto}\ len\ =\ std::distance(first,\ last);}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordflow}{if}\ (len\ >=\ 2)\ \{}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}*\ m\ =\ first\ +\ len\ /\ 2;}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{sorting_8h_a515b85edbb4832b89ec49e8a491acc6a}{merge}}(first,\ m);}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{sorting_8h_a515b85edbb4832b89ec49e8a491acc6a}{merge}}(m,\ last);}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ T*\ temp\ =\ \textcolor{keyword}{new}\ T[len];}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{sorting_8h_acee81dc7bf61b18c3382b8eeacc6bfbc}{merge\_aux}}(first,\ m,\ m,\ last,\ temp);}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ std::copy(temp,\ temp\ +\ len,\ first);}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ temp;}
+\DoxyCodeLine{00186\ \ \ \ \ \}}
+\DoxyCodeLine{00187\ \}}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00200\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ }
+\DoxyCodeLine{00201\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sorting_8h_aafa055f78e0bae97999f0ec7049b5a28}{insertion}}(T\ *first,\ T\ *last)\ \{}
+\DoxyCodeLine{00202\ \ \ \textcolor{keywordflow}{if}\ (first\ ==\ last)}
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00204\ \ \ }
+\DoxyCodeLine{00205\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ *fast\ =\ first\ +\ 1;\ fast\ !=\ last;\ ++fast)\ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordtype}{int}\ val\ =\ *fast;}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordtype}{int}\ *runner\ =\ fast;}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordflow}{while}\ (runner\ !=\ first\ \&\&\ val\ <\ *(runner\ -\/\ 1))\ \{}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ *runner\ =\ *(runner\ -\/\ 1);}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ -\/-\/runner;}
+\DoxyCodeLine{00211\ \ \ \ \ \}}
+\DoxyCodeLine{00212\ \ \ \ \ *runner\ =\ val;}
+\DoxyCodeLine{00213\ \ \ \}}
+\DoxyCodeLine{00214\ \}}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00227\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ }
+\DoxyCodeLine{00228\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sorting_8h_a49d0a07db9dece8ea7f3b54d4a28af9b}{shell}}(T\ *first,\ T\ *last)\ \{}
+\DoxyCodeLine{00229\ \ \ \textcolor{keywordtype}{int}\ tamanho\ =\ last\ -\/\ first;}
+\DoxyCodeLine{00230\ \ \ \textcolor{comment}{//\ Comece\ com\ um\ gap\ grande\ e,\ em\ seguida,\ reduz\ o\ gap\ até\ que\ ele\ se\ torne\ 1}}
+\DoxyCodeLine{00231\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ gap\ =\ tamanho\ /\ 2;\ gap\ >\ 0;\ gap\ /=\ 2)\ \{}
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{comment}{//\ Realize\ a\ ordenação\ por\ inserção\ em\ cada\ sublista\ definida\ pelo\ gap}}
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ gap;\ i\ <\ tamanho;\ i++)\ \{}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ temp\ =\ first[i];}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ j;}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ i;\ j\ >=\ gap\ \&\&\ temp\ <\ first[j\ -\/\ gap];\ j\ -\/=\ gap)\ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ first[j]\ =\ first[j\ -\/\ gap];}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ first[j]\ =\ temp;}
+\DoxyCodeLine{00240\ \ \ \ \ \}}
+\DoxyCodeLine{00241\ \ \ \}}
+\DoxyCodeLine{00242\ \}}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00256\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ }
+\DoxyCodeLine{00257\ T\ \mbox{\hyperlink{sorting_8h_ab09b73b68950cf3537e5230d1814a7ea}{get\_max}}(T\ *first,\ T\ *last)\{}
+\DoxyCodeLine{00258\ \ \ \ \ T\ maior\ =\ 0;}
+\DoxyCodeLine{00259\ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ distance(first,\ last);\ }
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ i++)\{}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(*(first+i)\ >\ maior)\{}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ maior\ =\ *(first+i);}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00264\ \ \ \ \ \}}
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keywordflow}{return}\ maior;}
+\DoxyCodeLine{00266\ \}}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00280\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ }
+\DoxyCodeLine{00281\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sorting_8h_a79e93110b32bbf4d32028d1d120d180a}{countSort}}(T\ *first,\ T\ *last,\ T\ place)\ \{}
+\DoxyCodeLine{00282\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ max\ =\ 100000;}
+\DoxyCodeLine{00283\ \ \ \ \ T\ output[max];}
+\DoxyCodeLine{00284\ \ \ \ \ T\ count[max];}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ distance(first,\ last);}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00288\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ max;\ i++)}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ count[i]\ =\ 0;}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00291\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ i++)\ }
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ count[(*(first+i)\ /\ place)\ \%\ 10]++;}
+\DoxyCodeLine{00293\ }
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00295\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ max;\ i++)\ }
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ count[i]\ +=\ count[i\ -\/\ 1];}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00298\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ n\ -\/\ 1;\ i\ >=\ 0;\ i-\/-\/)\ \{}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ output[count[(*(first+i)\ /\ place)\ \%\ 10]\ -\/\ 1]\ =\ *(first+i);}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ count[(*(first+i)\ /\ place)\ \%\ 10]-\/-\/;}
+\DoxyCodeLine{00301\ \ \ \ \ \}}
+\DoxyCodeLine{00302\ }
+\DoxyCodeLine{00303\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ i++)}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ *(first+i)\ =\ output[i];}
+\DoxyCodeLine{00305\ \}}
+\DoxyCodeLine{00306\ }
+\DoxyCodeLine{00318\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ }
+\DoxyCodeLine{00319\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sorting_8h_ad589b87e8a3a6e000ad8c50be11a856f}{radixsort}}(T\ *first,\ T\ *last)\ \{}
+\DoxyCodeLine{00320\ \ \ T\ max\ =\ get\_max<int>(first,\ last);}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00322\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ place\ =\ 1;\ max\ /\ place\ >\ 0;\ place\ *=\ 10)}
+\DoxyCodeLine{00323\ \ \ \ \ countSort<int>(first,\ last,\ place);}
+\DoxyCodeLine{00324\ \}}
+\DoxyCodeLine{00325\ }
+\DoxyCodeLine{00326\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

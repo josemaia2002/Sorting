@@ -1,0 +1,136 @@
+\doxysection{src/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \"{}sorting.\+h\"{}}\newline
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{main_8cpp_a27250fec55dcd2a903f12717eaebdc16}{organization}} \{ \newline
+\mbox{\hyperlink{main_8cpp_a27250fec55dcd2a903f12717eaebdc16a6460a2dca84d24e8375201f825ab79fc}{all\+\_\+random}} = 0
+, \mbox{\hyperlink{main_8cpp_a27250fec55dcd2a903f12717eaebdc16ada823fe662cb1725f38374814f6b04f1}{quarter}} = 25
+, \mbox{\hyperlink{main_8cpp_a27250fec55dcd2a903f12717eaebdc16a5824f466440ce04284756f157be56543}{half}} = 50
+, \mbox{\hyperlink{main_8cpp_a27250fec55dcd2a903f12717eaebdc16ac805c0ed1b41c9c86bb084450aca8b88}{three\+\_\+quarter}} = 75
+, \newline
+\mbox{\hyperlink{main_8cpp_a27250fec55dcd2a903f12717eaebdc16ae72ea0249bf77d860ada9ff673f143a7}{non\+\_\+descending}} = 100
+, \mbox{\hyperlink{main_8cpp_a27250fec55dcd2a903f12717eaebdc16a765cedc83ad2df2d8e2701b70822a480}{non\+\_\+ascending}} = 125
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_ac2078db72ad53ab4d7bf4c24a7d517b0}{conditioned\+\_\+disorder}} (int \texorpdfstring{$\ast$}{*}first, int \texorpdfstring{$\ast$}{*}last, int porcent)
+\begin{DoxyCompactList}\small\item\em Applies conditioned disorder to an array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a1065e7faad149c6c760ee5e68b66baab}{timing}} (int \texorpdfstring{$\ast$}{*}first, int \texorpdfstring{$\ast$}{*}last, void(\texorpdfstring{$\ast$}{*}func)(int \texorpdfstring{$\ast$}{*}, int \texorpdfstring{$\ast$}{*}), ofstream \&arquivo)
+\begin{DoxyCompactList}\small\item\em Measures the execution time of a function on an array and writes it to a file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{main_8cpp_a27250fec55dcd2a903f12717eaebdc16}{organization}} \mbox{\hyperlink{main_8cpp_a8d496fb4ea70dbf0f347cc79384cfd6e}{list\+\_\+sample}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{main_8cpp_a27250fec55dcd2a903f12717eaebdc16}\label{main_8cpp_a27250fec55dcd2a903f12717eaebdc16} 
+\index{main.cpp@{main.cpp}!organization@{organization}}
+\index{organization@{organization}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{organization}{organization}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{main_8cpp_a27250fec55dcd2a903f12717eaebdc16}{organization}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{all\_random@{all\_random}!main.cpp@{main.cpp}}\index{main.cpp@{main.cpp}!all\_random@{all\_random}}}\Hypertarget{main_8cpp_a27250fec55dcd2a903f12717eaebdc16a6460a2dca84d24e8375201f825ab79fc}\label{main_8cpp_a27250fec55dcd2a903f12717eaebdc16a6460a2dca84d24e8375201f825ab79fc} 
+all\+\_\+random&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{quarter@{quarter}!main.cpp@{main.cpp}}\index{main.cpp@{main.cpp}!quarter@{quarter}}}\Hypertarget{main_8cpp_a27250fec55dcd2a903f12717eaebdc16ada823fe662cb1725f38374814f6b04f1}\label{main_8cpp_a27250fec55dcd2a903f12717eaebdc16ada823fe662cb1725f38374814f6b04f1} 
+quarter&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{half@{half}!main.cpp@{main.cpp}}\index{main.cpp@{main.cpp}!half@{half}}}\Hypertarget{main_8cpp_a27250fec55dcd2a903f12717eaebdc16a5824f466440ce04284756f157be56543}\label{main_8cpp_a27250fec55dcd2a903f12717eaebdc16a5824f466440ce04284756f157be56543} 
+half&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{three\_quarter@{three\_quarter}!main.cpp@{main.cpp}}\index{main.cpp@{main.cpp}!three\_quarter@{three\_quarter}}}\Hypertarget{main_8cpp_a27250fec55dcd2a903f12717eaebdc16ac805c0ed1b41c9c86bb084450aca8b88}\label{main_8cpp_a27250fec55dcd2a903f12717eaebdc16ac805c0ed1b41c9c86bb084450aca8b88} 
+three\+\_\+quarter&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{non\_descending@{non\_descending}!main.cpp@{main.cpp}}\index{main.cpp@{main.cpp}!non\_descending@{non\_descending}}}\Hypertarget{main_8cpp_a27250fec55dcd2a903f12717eaebdc16ae72ea0249bf77d860ada9ff673f143a7}\label{main_8cpp_a27250fec55dcd2a903f12717eaebdc16ae72ea0249bf77d860ada9ff673f143a7} 
+non\+\_\+descending&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{non\_ascending@{non\_ascending}!main.cpp@{main.cpp}}\index{main.cpp@{main.cpp}!non\_ascending@{non\_ascending}}}\Hypertarget{main_8cpp_a27250fec55dcd2a903f12717eaebdc16a765cedc83ad2df2d8e2701b70822a480}\label{main_8cpp_a27250fec55dcd2a903f12717eaebdc16a765cedc83ad2df2d8e2701b70822a480} 
+non\+\_\+ascending&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_ac2078db72ad53ab4d7bf4c24a7d517b0}\label{main_8cpp_ac2078db72ad53ab4d7bf4c24a7d517b0} 
+\index{main.cpp@{main.cpp}!conditioned\_disorder@{conditioned\_disorder}}
+\index{conditioned\_disorder@{conditioned\_disorder}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{conditioned\_disorder()}{conditioned\_disorder()}}
+{\footnotesize\ttfamily void conditioned\+\_\+disorder (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{first,  }\item[{int \texorpdfstring{$\ast$}{*}}]{last,  }\item[{int}]{porcent }\end{DoxyParamCaption})}
+
+
+
+Applies conditioned disorder to an array. 
+
+This function applies conditioned disorder to the elements of an array specified by the range defined by the pointers \textquotesingle{}first\textquotesingle{} and \textquotesingle{}last\textquotesingle{}. The conditioned disorder is applied by swapping pairs of elements in the array. The number of pairs to be swapped is determined by the \textquotesingle{}porcent\textquotesingle{} parameter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Pointer to the first element in the array. \\
+\hline
+{\em last} & Pointer to the last element in the array (exclusive). \\
+\hline
+{\em porcent} & The percentage of pairs to be swapped. If the value is 125, it will be adjusted to 100. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a1065e7faad149c6c760ee5e68b66baab}\label{main_8cpp_a1065e7faad149c6c760ee5e68b66baab} 
+\index{main.cpp@{main.cpp}!timing@{timing}}
+\index{timing@{timing}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{timing()}{timing()}}
+{\footnotesize\ttfamily void timing (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{first,  }\item[{int \texorpdfstring{$\ast$}{*}}]{last,  }\item[{void(\texorpdfstring{$\ast$}{*})(int \texorpdfstring{$\ast$}{*}, int \texorpdfstring{$\ast$}{*})}]{func,  }\item[{ofstream \&}]{arquivo }\end{DoxyParamCaption})}
+
+
+
+Measures the execution time of a function on an array and writes it to a file. 
+
+This function measures the execution time of a given function \textquotesingle{}func\textquotesingle{} applied to the elements of an array specified by the range defined by the pointers \textquotesingle{}first\textquotesingle{} and \textquotesingle{}last\textquotesingle{}. The execution time is measured using the std\+::chrono library. The measured time is written to the provided ofstream \textquotesingle{}arquivo\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Pointer to the first element in the array. \\
+\hline
+{\em last} & Pointer to the last element in the array (exclusive). \\
+\hline
+{\em func} & Pointer to the function to be timed. \\
+\hline
+{\em arquivo} & The ofstream to which the execution time will be written. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8cpp_a8d496fb4ea70dbf0f347cc79384cfd6e}\label{main_8cpp_a8d496fb4ea70dbf0f347cc79384cfd6e} 
+\index{main.cpp@{main.cpp}!list\_sample@{list\_sample}}
+\index{list\_sample@{list\_sample}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{list\_sample}{list\_sample}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{main_8cpp_a27250fec55dcd2a903f12717eaebdc16}{organization}} list\+\_\+sample}
+

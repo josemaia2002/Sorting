@@ -1,0 +1,351 @@
+\doxysection{include/sorting.h File Reference}
+\hypertarget{sorting_8h}{}\label{sorting_8h}\index{include/sorting.h@{include/sorting.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{sorting_8h_a1b5c317dd4b13c96686456e14cabf80b}{print\+Array}} (T \texorpdfstring{$\ast$}{*}first, T \texorpdfstring{$\ast$}{*}last)
+\begin{DoxyCompactList}\small\item\em Prints the elements of an array. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{sorting_8h_a07edfdd492ac11defd36fcc3781a0617}{selection}} (T \texorpdfstring{$\ast$}{*}first, T \texorpdfstring{$\ast$}{*}last)
+\begin{DoxyCompactList}\small\item\em Sorts the elements of an array in ascending order using the selection sort algorithm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{sorting_8h_a10408b6f5495eb0821c08b04e374d924}{bubble}} (T \texorpdfstring{$\ast$}{*}first, T \texorpdfstring{$\ast$}{*}last)
+\begin{DoxyCompactList}\small\item\em Sorts the elements of an array in ascending order using the bubble sort algorithm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{sorting_8h_abc0b95001b6673171c3c81dcc40d115b}{partition}} (T \texorpdfstring{$\ast$}{*}first, T \texorpdfstring{$\ast$}{*}last, T \texorpdfstring{$\ast$}{*}pivot)
+\begin{DoxyCompactList}\small\item\em Partitions the elements of an array based on a pivot value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{sorting_8h_a2726342a6ccc8fac7e6c3a1d5c8bf1a7}{quicksort}} (T \texorpdfstring{$\ast$}{*}first, T \texorpdfstring{$\ast$}{*}last)
+\begin{DoxyCompactList}\small\item\em Sorts the elements of an array in ascending order using the quicksort algorithm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{sorting_8h_acee81dc7bf61b18c3382b8eeacc6bfbc}{merge\+\_\+aux}} (T \texorpdfstring{$\ast$}{*}l\+\_\+first, T \texorpdfstring{$\ast$}{*}l\+\_\+last, T \texorpdfstring{$\ast$}{*}r\+\_\+first, T \texorpdfstring{$\ast$}{*}r\+\_\+last, T \texorpdfstring{$\ast$}{*}a\+\_\+first)
+\begin{DoxyCompactList}\small\item\em Merges two sorted arrays into a single sorted array. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{sorting_8h_a515b85edbb4832b89ec49e8a491acc6a}{merge}} (T \texorpdfstring{$\ast$}{*}first, T \texorpdfstring{$\ast$}{*}last)
+\begin{DoxyCompactList}\small\item\em Sorts the elements of an array in ascending order using the merge sort algorithm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{sorting_8h_aafa055f78e0bae97999f0ec7049b5a28}{insertion}} (T \texorpdfstring{$\ast$}{*}first, T \texorpdfstring{$\ast$}{*}last)
+\begin{DoxyCompactList}\small\item\em Sorts the elements of an array in ascending order using the insertion sort algorithm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{sorting_8h_a49d0a07db9dece8ea7f3b54d4a28af9b}{shell}} (T \texorpdfstring{$\ast$}{*}first, T \texorpdfstring{$\ast$}{*}last)
+\begin{DoxyCompactList}\small\item\em Sorts the elements of an array in ascending order using the shell sort algorithm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{sorting_8h_ab09b73b68950cf3537e5230d1814a7ea}{get\+\_\+max}} (T \texorpdfstring{$\ast$}{*}first, T \texorpdfstring{$\ast$}{*}last)
+\begin{DoxyCompactList}\small\item\em Finds the maximum element in an array. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{sorting_8h_a79e93110b32bbf4d32028d1d120d180a}{count\+Sort}} (T \texorpdfstring{$\ast$}{*}first, T \texorpdfstring{$\ast$}{*}last, T place)
+\begin{DoxyCompactList}\small\item\em Sorts the elements of an array in ascending order using the counting sort algorithm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{sorting_8h_ad589b87e8a3a6e000ad8c50be11a856f}{radixsort}} (T \texorpdfstring{$\ast$}{*}first, T \texorpdfstring{$\ast$}{*}last)
+\begin{DoxyCompactList}\small\item\em Sorts the elements of an array in ascending order using the radix sort algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{sorting_8h_a10408b6f5495eb0821c08b04e374d924}\label{sorting_8h_a10408b6f5495eb0821c08b04e374d924} 
+\index{sorting.h@{sorting.h}!bubble@{bubble}}
+\index{bubble@{bubble}!sorting.h@{sorting.h}}
+\doxysubsubsection{\texorpdfstring{bubble()}{bubble()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void bubble (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{first,  }\item[{T \texorpdfstring{$\ast$}{*}}]{last }\end{DoxyParamCaption})}
+
+
+
+Sorts the elements of an array in ascending order using the bubble sort algorithm. 
+
+This function sorts the elements of an array specified by the range defined by the pointers \textquotesingle{}first\textquotesingle{} and \textquotesingle{}last\textquotesingle{} in ascending order. The elements are sorted in-\/place, meaning the original array will be modified.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements in the array. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Pointer to the first element in the array. \\
+\hline
+{\em last} & Pointer to the last element in the array (exclusive). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{sorting_8h_a79e93110b32bbf4d32028d1d120d180a}\label{sorting_8h_a79e93110b32bbf4d32028d1d120d180a} 
+\index{sorting.h@{sorting.h}!countSort@{countSort}}
+\index{countSort@{countSort}!sorting.h@{sorting.h}}
+\doxysubsubsection{\texorpdfstring{countSort()}{countSort()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void count\+Sort (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{first,  }\item[{T \texorpdfstring{$\ast$}{*}}]{last,  }\item[{T}]{place }\end{DoxyParamCaption})}
+
+
+
+Sorts the elements of an array in ascending order using the counting sort algorithm. 
+
+This function sorts the elements of an array specified by the range defined by the pointers \textquotesingle{}first\textquotesingle{} and \textquotesingle{}last\textquotesingle{} in ascending order. The elements are sorted in-\/place, meaning the original array will be modified. The counting sort algorithm is used for sorting.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements in the array. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Pointer to the first element in the array. \\
+\hline
+{\em last} & Pointer to the last element in the array (exclusive). \\
+\hline
+{\em place} & The place value used for sorting (e.\+g., ones, tens, hundreds place). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{sorting_8h_ab09b73b68950cf3537e5230d1814a7ea}\label{sorting_8h_ab09b73b68950cf3537e5230d1814a7ea} 
+\index{sorting.h@{sorting.h}!get\_max@{get\_max}}
+\index{get\_max@{get\_max}!sorting.h@{sorting.h}}
+\doxysubsubsection{\texorpdfstring{get\_max()}{get\_max()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T get\+\_\+max (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{first,  }\item[{T \texorpdfstring{$\ast$}{*}}]{last }\end{DoxyParamCaption})}
+
+
+
+Finds the maximum element in an array. 
+
+This function finds the maximum element in an array specified by the range defined by the pointers \textquotesingle{}first\textquotesingle{} and \textquotesingle{}last\textquotesingle{}. The maximum element is determined based on the comparison using the \textquotesingle{}\texorpdfstring{$<$}{<}\textquotesingle{} operator.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements in the array. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Pointer to the first element in the array. \\
+\hline
+{\em last} & Pointer to the last element in the array (exclusive).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The maximum element in the array. 
+\end{DoxyReturn}
+\Hypertarget{sorting_8h_aafa055f78e0bae97999f0ec7049b5a28}\label{sorting_8h_aafa055f78e0bae97999f0ec7049b5a28} 
+\index{sorting.h@{sorting.h}!insertion@{insertion}}
+\index{insertion@{insertion}!sorting.h@{sorting.h}}
+\doxysubsubsection{\texorpdfstring{insertion()}{insertion()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void insertion (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{first,  }\item[{T \texorpdfstring{$\ast$}{*}}]{last }\end{DoxyParamCaption})}
+
+
+
+Sorts the elements of an array in ascending order using the insertion sort algorithm. 
+
+This function sorts the elements of an array specified by the range defined by the pointers \textquotesingle{}first\textquotesingle{} and \textquotesingle{}last\textquotesingle{} in ascending order. The elements are sorted in-\/place, meaning the original array will be modified. The insertion sort algorithm is used for sorting.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements in the array. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Pointer to the first element in the array. \\
+\hline
+{\em last} & Pointer to the last element in the array (exclusive). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{sorting_8h_a515b85edbb4832b89ec49e8a491acc6a}\label{sorting_8h_a515b85edbb4832b89ec49e8a491acc6a} 
+\index{sorting.h@{sorting.h}!merge@{merge}}
+\index{merge@{merge}!sorting.h@{sorting.h}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void merge (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{first,  }\item[{T \texorpdfstring{$\ast$}{*}}]{last }\end{DoxyParamCaption})}
+
+
+
+Sorts the elements of an array in ascending order using the merge sort algorithm. 
+
+This function sorts the elements of an array specified by the range defined by the pointers \textquotesingle{}first\textquotesingle{} and \textquotesingle{}last\textquotesingle{} in ascending order. The elements are sorted in-\/place, meaning the original array will be modified. The merge sort algorithm is used for sorting.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements in the array. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Pointer to the first element in the array. \\
+\hline
+{\em last} & Pointer to the last element in the array (exclusive). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{sorting_8h_acee81dc7bf61b18c3382b8eeacc6bfbc}\label{sorting_8h_acee81dc7bf61b18c3382b8eeacc6bfbc} 
+\index{sorting.h@{sorting.h}!merge\_aux@{merge\_aux}}
+\index{merge\_aux@{merge\_aux}!sorting.h@{sorting.h}}
+\doxysubsubsection{\texorpdfstring{merge\_aux()}{merge\_aux()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void merge\+\_\+aux (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{l\+\_\+first,  }\item[{T \texorpdfstring{$\ast$}{*}}]{l\+\_\+last,  }\item[{T \texorpdfstring{$\ast$}{*}}]{r\+\_\+first,  }\item[{T \texorpdfstring{$\ast$}{*}}]{r\+\_\+last,  }\item[{T \texorpdfstring{$\ast$}{*}}]{a\+\_\+first }\end{DoxyParamCaption})}
+
+
+
+Merges two sorted arrays into a single sorted array. 
+
+This function merges two sorted arrays specified by the ranges defined by the pointers \textquotesingle{}l\+\_\+first\textquotesingle{} and \textquotesingle{}l\+\_\+last\textquotesingle{} (representing the left array) and \textquotesingle{}r\+\_\+first\textquotesingle{} and \textquotesingle{}r\+\_\+last\textquotesingle{} (representing the right array) into a single sorted array specified by the range defined by the pointer \textquotesingle{}a\+\_\+first\textquotesingle{} (representing the output array). The merged array is sorted in ascending order. The function assumes that both input arrays are already sorted.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements in the arrays. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em l\+\_\+first} & Pointer to the first element in the left array. \\
+\hline
+{\em l\+\_\+last} & Pointer to the last element in the left array (exclusive). \\
+\hline
+{\em r\+\_\+first} & Pointer to the first element in the right array. \\
+\hline
+{\em r\+\_\+last} & Pointer to the last element in the right array (exclusive). \\
+\hline
+{\em a\+\_\+first} & Pointer to the first element in the output array. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{sorting_8h_abc0b95001b6673171c3c81dcc40d115b}\label{sorting_8h_abc0b95001b6673171c3c81dcc40d115b} 
+\index{sorting.h@{sorting.h}!partition@{partition}}
+\index{partition@{partition}!sorting.h@{sorting.h}}
+\doxysubsubsection{\texorpdfstring{partition()}{partition()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \texorpdfstring{$\ast$}{*} partition (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{first,  }\item[{T \texorpdfstring{$\ast$}{*}}]{last,  }\item[{T \texorpdfstring{$\ast$}{*}}]{pivot }\end{DoxyParamCaption})}
+
+
+
+Partitions the elements of an array based on a pivot value. 
+
+This function partitions the elements of an array specified by the range defined by the pointers \textquotesingle{}first\textquotesingle{} and \textquotesingle{}last\textquotesingle{} based on a pivot value. The elements smaller than the pivot are moved to the left side of the pivot, and the elements greater than or equal to the pivot are moved to the right side. The pivot element itself is also moved to its final sorted position. The function returns a pointer t o the pivot element\textquotesingle{}s final position in the array.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements in the array. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Pointer to the first element in the array. \\
+\hline
+{\em last} & Pointer to the last element in the array (exclusive). \\
+\hline
+{\em pivot} & Pointer to the pivot element.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the pivot element\textquotesingle{}s final position in the array. 
+\end{DoxyReturn}
+\Hypertarget{sorting_8h_a1b5c317dd4b13c96686456e14cabf80b}\label{sorting_8h_a1b5c317dd4b13c96686456e14cabf80b} 
+\index{sorting.h@{sorting.h}!printArray@{printArray}}
+\index{printArray@{printArray}!sorting.h@{sorting.h}}
+\doxysubsubsection{\texorpdfstring{printArray()}{printArray()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void print\+Array (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{first,  }\item[{T \texorpdfstring{$\ast$}{*}}]{last }\end{DoxyParamCaption})}
+
+
+
+Prints the elements of an array. 
+
+This function prints the elements of an array specified by the range defined by the pointers \textquotesingle{}first\textquotesingle{} and \textquotesingle{}last\textquotesingle{}. The elements are printed in the order they appear in the array.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements in the array. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Pointer to the first element in the array. \\
+\hline
+{\em last} & Pointer to the last element in the array (exclusive). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{sorting_8h_a2726342a6ccc8fac7e6c3a1d5c8bf1a7}\label{sorting_8h_a2726342a6ccc8fac7e6c3a1d5c8bf1a7} 
+\index{sorting.h@{sorting.h}!quicksort@{quicksort}}
+\index{quicksort@{quicksort}!sorting.h@{sorting.h}}
+\doxysubsubsection{\texorpdfstring{quicksort()}{quicksort()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void quicksort (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{first,  }\item[{T \texorpdfstring{$\ast$}{*}}]{last }\end{DoxyParamCaption})}
+
+
+
+Sorts the elements of an array in ascending order using the quicksort algorithm. 
+
+This function sorts the elements of an array specified by the range defined by the pointers \textquotesingle{}first\textquotesingle{} and \textquotesingle{}last\textquotesingle{} in ascending order. The elements are sorted in-\/place, meaning the original array will be modified. The quicksort algorithm is used for sorting.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements in the array. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Pointer to the first element in the array. \\
+\hline
+{\em last} & Pointer to the last element in the array (exclusive). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{sorting_8h_ad589b87e8a3a6e000ad8c50be11a856f}\label{sorting_8h_ad589b87e8a3a6e000ad8c50be11a856f} 
+\index{sorting.h@{sorting.h}!radixsort@{radixsort}}
+\index{radixsort@{radixsort}!sorting.h@{sorting.h}}
+\doxysubsubsection{\texorpdfstring{radixsort()}{radixsort()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void radixsort (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{first,  }\item[{T \texorpdfstring{$\ast$}{*}}]{last }\end{DoxyParamCaption})}
+
+
+
+Sorts the elements of an array in ascending order using the radix sort algorithm. 
+
+This function sorts the elements of an array specified by the range defined by the pointers \textquotesingle{}first\textquotesingle{} and \textquotesingle{}last\textquotesingle{} in ascending order. The elements are sorted in-\/place, meaning the original array will be modified. The radix sort algorithm is used for sorting.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements in the array. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Pointer to the first element in the array. \\
+\hline
+{\em last} & Pointer to the last element in the array (exclusive). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{sorting_8h_a07edfdd492ac11defd36fcc3781a0617}\label{sorting_8h_a07edfdd492ac11defd36fcc3781a0617} 
+\index{sorting.h@{sorting.h}!selection@{selection}}
+\index{selection@{selection}!sorting.h@{sorting.h}}
+\doxysubsubsection{\texorpdfstring{selection()}{selection()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void selection (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{first,  }\item[{T \texorpdfstring{$\ast$}{*}}]{last }\end{DoxyParamCaption})}
+
+
+
+Sorts the elements of an array in ascending order using the selection sort algorithm. 
+
+This function sorts the elements of an array specified by the range defined by the pointers \textquotesingle{}first\textquotesingle{} and \textquotesingle{}last\textquotesingle{} in ascending order. The elements are sorted in-\/place, meaning the original array will be modified.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements in the array. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Pointer to the first element in the array. \\
+\hline
+{\em last} & Pointer to the last element in the array (exclusive). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{sorting_8h_a49d0a07db9dece8ea7f3b54d4a28af9b}\label{sorting_8h_a49d0a07db9dece8ea7f3b54d4a28af9b} 
+\index{sorting.h@{sorting.h}!shell@{shell}}
+\index{shell@{shell}!sorting.h@{sorting.h}}
+\doxysubsubsection{\texorpdfstring{shell()}{shell()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void shell (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{first,  }\item[{T \texorpdfstring{$\ast$}{*}}]{last }\end{DoxyParamCaption})}
+
+
+
+Sorts the elements of an array in ascending order using the shell sort algorithm. 
+
+This function sorts the elements of an array specified by the range defined by the pointers \textquotesingle{}first\textquotesingle{} and \textquotesingle{}last\textquotesingle{} in ascending order. The elements are sorted in-\/place, meaning the original array will be modified. The shell sort algorithm is used for sorting.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements in the array. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Pointer to the first element in the array. \\
+\hline
+{\em last} & Pointer to the last element in the array (exclusive). \\
+\hline
+\end{DoxyParams}
