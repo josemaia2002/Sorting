@@ -8,7 +8,7 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 
 
 - Nome: *<Arthur Ferreira de Holanda>*
-- Email: *<>*
+- Email: *<arthurhollanda@gmail.com>*
 - Turma: *<DIM0119-ESTRUTURA DE DADOS BÁSICAS I - T01(2023.1)>*
 
 # Indique quais algoritmos foram implementados nos experimentos
