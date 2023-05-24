@@ -2,12 +2,12 @@
 
 Preencha os dados abaixo para identificar a autoria do trabalho.
 
-- Nome: *<José Maia da Silva Neto>*
+- Nome: *José Maia da Silva Neto*
 - Email: *<maianeto2014@gmail.com>*
 - Turma: *<DIM0119-ESTRUTURA DE DADOS BÁSICAS I - T01(2023.1)>*
 
 
-- Nome: *<Arthur Ferreira de Holanda>*
+- Nome: *Arthur Ferreira de Holanda*
 - Email: *<arthurhollanda@gmail.com>*
 - Turma: *<DIM0119-ESTRUTURA DE DADOS BÁSICAS I - T01(2023.1)>*
 
