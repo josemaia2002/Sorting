@@ -96,7 +96,7 @@ int main(){
     void (*functptr[])(int*, int*) = {selection<int>, bubble<int>, quicksort<int>, merge<int>, insertion<int>, shell<int>, radixsort<int>};
     std::string func_names[7] = { "selection", "bubble", "quicksort", "merge", "insertion", "shell", "radixsort"};
 
-    for(int i = 2; i < 3; i++){
+    for(int i = 0; i < 7 ; i++){
         for(int sample = non_ascending; sample >= all_random; sample -= quarter){
             for(int j = 100; j < 100000; j+=4000){
                 arquivo.open(paths[i], ios::app);
